@@ -166,7 +166,7 @@ namespace Zaioll
     template<typename Type>
     Type ArrayList<Type>::retrieveAt(unsigned position) const
     {
-        return nullptr;
+        return 0;
     }
 
     template<typename Type>

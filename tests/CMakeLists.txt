@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.14)
 
-set(CMAKE_CXX_FLAGS "-Wall -Werror -Wextra -pedantic")
+set(CMAKE_CXX_FLAGS "-Wall -pedantic -O0")
 
 include_directories("${CMAKE_INCLUDE_PATH}")
 
