@@ -13,4 +13,13 @@ add_test(
     COMMAND ArrayListTest
 )
 
+add_executable(LinkedListTest LinkedListTest.cpp)
+target_link_libraries(LinkedListTest PUBLIC gtest_main LinkedList ${GTEST_LIBRARIES} pthread)
+
+add_test(
+    NAME LinkedListTest
+    COMMAND LinkedListTest
+)
+
+
 add_subdirectory(${CMAKE_CURRENT_LIST_DIR}/sort)
