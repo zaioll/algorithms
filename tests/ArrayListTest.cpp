@@ -40,3 +40,24 @@ TEST(ArrayList, RemoveAtValidPosition)
 
     ASSERT_TRUE(list.removeAt(1));
 }
+
+TEST(ArrayList, TestEqualsOperator)
+{
+    ArrayList<int> list(1);
+    list.insertEnd(1);
+
+    ArrayList<int> list_1(1);
+    list_1.insertEnd(1);
+
+    ASSERT_TRUE(list == list_1);
+}
+
+TEST(ArrayList, TestAssignmentOperator)
+{
+    ArrayList<int> list(1);
+    list.insertEnd(1);
+
+    ArrayList<int> list_1 = list;
+
+    ASSERT_EQ(1, list_1.getSize());
+}

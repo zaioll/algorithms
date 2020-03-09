@@ -12,7 +12,6 @@ namespace Zaioll
 
             /**
              * @brief Destroy the Array List object
-             * 
              */
             ~ArrayList();
 
@@ -99,11 +98,46 @@ namespace Zaioll
              */
             bool isItemAtEqual(unsigned location, const Type &item) const;
 
+            /**
+             * @brief
+             *
+             * @return true
+             * @return false
+             */
+            bool operator==(const ArrayList<Type> &) const;
+
+            /**
+             * @brief
+             *
+             * @return true
+             * @return false
+             */
+            bool operator!=(const ArrayList<Type> &) const;
+
+            /**
+             * @brief
+             *
+             * @return ArrayList<Type>
+             */
+            ArrayList<Type> operator=(const ArrayList<Type> &) const;
+
         private:
             const unsigned _maxSize;
             unsigned _size;
             Type *_list;
     };
+
+    template<typename Type>
+    bool ArrayList<Type>::operator==(const ArrayList<Type> &right) const
+    {
+        return false;
+    }
+
+    template<typename Type>
+    bool ArrayList<Type>::operator!=(const ArrayList<Type> &right) const
+    {
+        return false;
+    }
 
     template<typename Type>
     ArrayList<Type>::~ArrayList()
